@@ -1,0 +1,12 @@
+.env/*
+tmp/*
+*.keys
+__pycache__
+*.pyc
+*.egg-info
+dist/
+build/
+
+env_share/enc/*
+!env_share/enc/.gitkeep
+dxsync.json

@@ -1,0 +1,40 @@
+import click
+import logging
+
+from env_share import encryption, decryption
+
+
+@click.group()
+@click.option("-v", "--verbose", is_flag=True, help="Enable verbose output")
+def cli(verbose: bool) -> None:
+    level = logging.DEBUG if verbose else logging.INFO
+    logging.basicConfig(
+        level=level,
+        format="%(message)s",
+    )
+
+
+@cli.command()
+@click.argument("env")
+def encrypt(env: str) -> None:
+    encryption.main(env)
+
+
+@cli.command()
+@click.argument("env")
+def decrypt(env: str) -> None:
+    decryption.main(env)
+
+
+@cli.command()
+def init() -> None:
+    from env_share.init import run_init
+    run_init()
+
+
+def main() -> None:
+    cli()
+
+
+if __name__ == "__main__":
+    main()
