@@ -1,6 +1,6 @@
 [project]
 name = "dxsync"
-version = "0.1.0"
+version = "0.2.0"
 description = "CLI tool for syncing encrypted .env files across teams using dotenvx"
 readme = "README.md"
 requires-python = ">=3.11"
