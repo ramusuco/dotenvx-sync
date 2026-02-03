@@ -3,7 +3,7 @@
 !*/
 
 !dotenvx_plaintext_sync/
-!dotenvx_plaintext_sync/**.py
+!dotenvx_plaintext_sync/**
 !LICENSE
 !README.md
 !pyproject.toml
